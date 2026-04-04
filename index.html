@@ -1,60 +1,121 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
-    <title>Portfolio - Samir Isaac Diampaka</title>
-    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Matrix - Samir</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- ================= LOADER MATRIX ================= -->
-<div id="loader">
-    <div class="matrix-loader-text">INITIALISATION...</div>
-</div>
+    <!-- ECRAN DE CHARGEMENT MATRIX -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-text">INITIALISATION MATRIX</div>
+            <div class="loading-progress">
+                <div class="progress-bar"></div>
+            </div>
+            <div class="loading-status">Connexion au système...</div>
+            <div class="matrix-code">
+                <span>01010101 01001000 01110100</span><br>
+                <span>00110001 00100000 01010100</span><br>
+                <span>01101101 01100001 01110100</span>
+            </div>
+        </div>
+    </div>
 
-<!-- ================= AUDIO ================= -->
-<audio id="matrixAudio" loop>
-    <source src="musique.mp3" type="audio/mp3">
-</audio>
+    <!-- pluie matrix -->
+    <canvas id="matrix"></canvas>
 
-<!-- ================= HEADER ================= -->
-<header>
-   <h1 class="glitch" data-text="SAMIR - BTS SIO SLAM">SAMIR - BTS SIO SLAM</h1>
-    <nav>
+    <!-- ligne scan -->
+    <div class="scan"></div>
+
+
+    <header>
+
+        <h1 class="glitch">SAMIR ISAAC DIAMPAKA</h1>
+
+        <nav>
+
+        <a href="parcours.html">Parcours Personnel </a>
         <a href="cv.html">CV</a>
         <a href="projets.html">Projets</a>
-        <a href="stages.html">Stages</a>
         <a href="veille.html">Veille</a>
         <a href="contact.html">Contact</a>
         <a href="tableau.html">Tableau de synthèse</a>
-    </nav>
-</header>
-<section class="card">
-    <h2 class="hack-title">Univers Matrix</h2>
-    <img src="C:\Users\user\Documents\Porfolio-2026\images\tenor.gif" class="matrix-img">
-    <p>
-        Portfolio immersif inspiré d’un environnement cybersécurisé.
-        Chaque projet représente une mission technique simulée.
-    </p>
-</section>
+        
 
-<section class="intro">
-    <h2>Bienvenue dans la Matrice du Développement</h2>
-    <p>Étudiant BTS SIO SLAM – Développement & Cybersécurité</p>
-</section>
+        </nav>
 
-<audio id="matrixAudio" loop>
-    <source src="C:\Users\user\Music\1-Intro.wav" type="audio/mpeg">
-</audio>
+    </header>
 
-<audio id="keyboardSound">
-    <source src="C:\Users\user\Music\1-Intro.wav" type="audio/mpeg">
-</audio>
 
-<script src="script.js"></script>
+    <!-- HERO MATRIX -->
+
+    <section class="hero">
+
+    <h2 class="matrix-title">Bienvenue dans la Matrice</h2>
+
+    <p class="matrix-sub">Portfolio BTS SIO SLAM – Développement & Technologies</p>
+
+    <div id="terminal"></div>
+
+    </section>
+
+
+
+    <img src="image0.png" class="matrix-img">
+
+    </section>
+
+        <!-- PILULE MATRIX -->
+
+        <section class="card">
+
+        <h2>Choisissez votre destin</h2>
+
+        <!-- image de la scène des pilules -->
+        <img src="4565265-morpheus-the-matrix.jpg" alt="Morpheus presents pills" class="matrix-img pill-image">
+
+        <div class="pills">
+
+        <button class="pill red">Pilule Rouge</button>
+
+        <button class="pill blue">Pilule Bleue</button>
+
+        </div>
+
+        <p id="pillMessage"></p>
+
+    </section>
+
+    <!-- STATISTIQUES -->
+
+    <h2>le nombre de jours avant le BTS</h2>
+    <section class="card stats">
+        <h2>Compteur du BTS</h2>
+        <div class="stats-grid">
+            <div class="stat">
+                <h3 id="daysBTS">...</h3>
+            </div>
+        </div>
+    </section>
+    </div>
+
+    </section>
+
+    <footer>
+
+    <p>© 2026 - Portfolio Samir Isaac Diampaka</p>
+
+    </footer>
+
+    <audio id="clickSound" src="sounds/matrix-click.mp3"></audio>
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>
-
-
-

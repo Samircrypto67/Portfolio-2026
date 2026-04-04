@@ -8,63 +8,97 @@
 </head>
 
 <body>
+    <canvas id="matrix"></canvas>
+    <a href="index.html" class="home-btn">Retour Accueil</a>
 
-<section class="content">
+    <section class="content">
 
 <h1>FICHE SITUATION PROFESSIONNELLE – DÉVELOPPEMENT WEB (Laravel)</h1>
 
-<p><strong>Épreuve :</strong> E6</p>
-<p><strong>Numéro réalisation :</strong> 2</p>
-<p><strong>Organisation :</strong> M2L (Maison des Ligues de Lorraine)</p>
-<p><strong>Formation :</strong> BTS SIO – SLAM</p>
-<p><strong>Date :</strong> 27/02/2026</p>
-<p><strong>N° candidat :</strong> 02543699075</p>
-<p><strong>Type :</strong> Ponctuel</p>
-<p><strong>Adresse page :</strong> https://tonportfolio/situation2.html</p>
+    <p><strong>Épreuve :</strong> E6</p>
+    <p><strong>Numéro réalisation :</strong> 2</p>
+    <p><strong>Organisation :</strong> M2L (Maison des Ligues de Lorraine)</p>
+    <p><strong>Formation :</strong> BTS SIO – SLAM</p>
+    <p><strong>Date :</strong> 27/02/2026</p>
+    <p><strong>N° candidat :</strong> 02543699075</p>
+    <p><strong>Type :</strong> Ponctuel</p>
+    <p><strong>Adresse page :</strong>https://github.com/Samircrypto67/Portfolio-2026/blob/main/situation2.html</p>
 
 <h2>Contexte</h2>
-<p>
-Dans un contexte pédagogique, j’ai développé <strong>SkyStorm</strong>, 
-une application web inspirée de Twitter/X, permettant la gestion 
-d’utilisateurs et d’interactions sociales.
+    <p>
+    Dans un contexte pédagogique pour l'épreuve E6 du BTS SIO option SLAM, j'ai développé <strong>SkyStorm</strong>, 
+    une application web inspirée de Twitter/X, permettant la gestion 
+    d'utilisateurs et d'interactions sociales. Ce projet démontre la maîtrise du framework Laravel 
+    et des bonnes pratiques de développement web moderne.
 </p>
 
 <h2>Objectif</h2>
 <p>
 Mettre en œuvre une application web complète en architecture MVC 
 avec Laravel, incluant authentification, gestion de données relationnelles 
-et interactions sociales.
+et interactions sociales. Le projet vise à démontrer les compétences 
+en développement web full-stack et en gestion de projet.
 </p>
 
 <h2>Fonctionnalités principales</h2>
 <ul>
-    <li>Inscription et connexion des utilisateurs</li>
+    <li>Inscription et connexion des utilisateurs avec Laravel UI</li>
     <li>Création, modification et suppression de posts</li>
-    <li>Système de suivi entre utilisateurs</li>
-    <li>Système de likes</li>
-    <li>Fil d’actualité simplifié</li>
+    <li>Système de suivi entre utilisateurs (follow/unfollow)</li>
+    <li>Système de likes sur les posts</li>
+    <li>Fil d'actualité personnalisé</li>
+    <li>Interface responsive avec Bootstrap</li>
+</ul>
+
+<h2>Architecture et modélisation</h2>
+<p>L'application suit l'architecture MVC de Laravel avec une séparation claire des responsabilités :</p>
+<ul>
+    <li><strong>Modèles (Models) :</strong> Gestion des entités User et Post avec Eloquent ORM</li>
+    <li><strong>Vues (Views) :</strong> Templates Blade pour l'interface utilisateur</li>
+    <li><strong>Contrôleurs (Controllers) :</strong> Logique métier et gestion des requêtes HTTP</li>
+    <li><strong>Routes :</strong> Définition des endpoints et middlewares d'authentification</li>
+</ul>
+
+<p><strong>Modèle de données (MCD) :</strong></p>
+<ul>
+    <li>Relation N-N entre Users (système de follow)</li>
+    <li>Relation 1-N entre Users et Posts</li>
+    <li>Relation N-N entre Users et Posts (système de likes)</li>
 </ul>
 
 <h2>Environnement technique</h2>
 <ul>
-    <li>Langage : PHP 8</li>
+    <li>Langage : PHP 8.x</li>
     <li>Framework : Laravel 12</li>
-    <li>Base de données : MySQL</li>
+    <li>IDE : PhpStorm</li>
+    <li>Base de données : MySQL / MariaDB</li>
     <li>ORM : Eloquent</li>
-    <li>Frontend : Blade / Bootstrap</li>
+    <li>Frontend : Blade templates / Bootstrap (Laravel UI)</li>
+    <li>Build tool : Composer (dépendances PHP)</li>
+    <li>Asset compilation : Vite.js</li>
+    <li>Testing : PHPUnit</li>
+    <li>Versionning : Git</li>
 </ul>
 
 <h2>Compétences mobilisées</h2>
 <ul>
-    <li>Développement web en architecture MVC</li>
-    <li>Modélisation de base de données (MCD)</li>
-    <li>Gestion des relations 1-N et N-N</li>
-    <li>Implémentation d’un système d’authentification</li>
-    <li>Organisation d’un projet Git</li>
+    <li>Développement web en architecture MVC avec Laravel</li>
+    <li>Configuration et utilisation de PhpStorm pour le développement PHP</li>
+    <li>Modélisation de base de données (MCD/MLD) et migration Laravel</li>
+    <li>Gestion des relations 1-N et N-N avec Eloquent ORM</li>
+    <li>Implémentation d'un système d'authentification complet</li>
+    <li>Développement d'API RESTful avec Laravel</li>
+    <li>Utilisation de Blade pour les templates dynamiques</li>
+    <li>Intégration de Bootstrap pour l'interface utilisateur</li>
+    <li>Organisation et gestion d'un projet Git professionnel</li>
+    <li>Tests unitaires et fonctionnels avec PHPUnit</li>
 </ul>
 
+<h2>Résultats et livrables</h2>
+<p>SkyStorm a été développé avec succès et démontre une application web fonctionnelle avec toutes les fonctionnalités sociales demandées. Le code source est organisé selon les standards Laravel, documenté et versionné sur Git. L'application est déployable et prête pour une utilisation en production.</p>
 
-<a href="Porfolio-2026\Situation_Professionnelle_2_E6_DIAMPAKA_Samir.pdf" class="btn" download>Télécharger la fiche</a>
+
+<a href="Fiche de situation professionnelle SLAM -situation 2.pdf" class="btn" download>Télécharger la fiche</a>
 
 
 </section>

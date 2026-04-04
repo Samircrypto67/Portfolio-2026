@@ -2,20 +2,36 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>CV</title>
+    <title>Tableau de Synthèse</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
- 
 <body>
 
+<!-- Pluie Matrix -->
+<canvas id="matrix"></canvas>
 
-<header>
-    <h1>TABLEAU DE SYNTHESE</h1>
-     <nav>
-        <a href="index.html.html">Accueil</a>
-        
-    </nav>
-    <p>BTS SIO - Option SLAM (2024-2026)</p>
+<!-- Bouton retour accueil -->
+<a href="index.html" class="home-btn">Retour Accueil</a>
 
-    <a href=" C:\Users\user\Downloads\Tableau de synthèse Épreuve E5 (1).pdf" class="btn" download>Télécharger  PDF</a>
-</header>
+<!-- Contenu principal -->
+<section class="card">
+    <h1>TABLEAU DE SYNTHÈSE</h1>
+
+    <p class="tableau-intro">
+        BTS SIO - Option SLAM (2024-2026)
+    </p>
+    <div class="download-section">
+        <a href="C:\Users\user\Downloads\Tableau de synthèse Épreuve E5 (1).pdf" class="btn" download>Télécharger le PDF</a>
+    </div> 
+</section>
+
+<!-- animation du personnage de Matrix (image locale) -->
+<div class="matrix-character">
+    <!-- replace 'maxresdefault.jpg' with your own Matrix image if needed -->
+    <img src="maxresdefault.jpg" alt="Personnage Matrix" class="matrix-img">
+</div>
+
+
+</body>
+</html>

@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <title>Situation 1 - E6 BTS SIO SLAM</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
+    <canvas id="matrix"></canvas>
+    <a href="index.html" class="home-btn">Retour Accueil</a>
 
-<section class="content">
+    <section class="content">
 
     <h1>FICHE SITUATION PROFESSIONNELLE – JAVA</h1>
 
@@ -22,36 +25,56 @@
     <p><strong>Adresse page :</strong> https://github.com/Samircrypto67/Portfolio-2026/blob/main/situation1.html</p>
 
     <h2>Contexte</h2>
-    <p>
-    Dans le cadre d’un besoin interne de la M2L, j’ai développé une application en Java
-    permettant de gérer des utilisateurs et leurs données de manière centralisée.
-    </p>
+    <p>Dans le cadre d'un besoin interne de la M2L, j'ai développé une application de gestion du personnel en Java permettant d'administrer les données des employés de manière centralisée. Cette application répond aux exigences de suivi des informations RH et de maintenance des données personnelles.</p>
 
     <h2>Objectif</h2>
-    <p>
-    Concevoir une application structurée en Java permettant la gestion des utilisateurs,
-    avec connexion à une base de données et respect des principes de programmation orientée objet.
-    </p>
+    <p>Concevoir et développer une application Java complète permettant la gestion complète du personnel, incluant l'ajout, la modification, la suppression et la consultation des données des employés, avec une connexion sécurisée à une base de données PostgreSQL et le respect des principes de la programmation orientée objet.</p>
+
+    <h2>Fonctionnalités principales</h2>
+    <ul>
+        <li>Gestion complète des employés (CRUD)</li>
+        <li>Système d'authentification et d'autorisation</li>
+        <li>Interface en ligne de commande intuitive</li>
+        <li>Connexion persistante à la base de données</li>
+        <li>Gestion des erreurs et validation des données</li>
+        <li>Architecture modulaire et maintenable</li>
+    </ul>
 
     <h2>Environnement technique</h2>
     <ul>
-        <li>Langage : Java</li>
-        <li>IDE : Eclipse</li>
+        <li>Langage : Java 8</li>
+        <li>IDE : Eclipse IDE</li>
+        <li>Build tool : Maven</li>
         <li>Base de données : PostgreSQL</li>
-        <li>Connexion : JDBC</li>
-        <li>Système : Windows</li>
+        <li>Connexion : JDBC (Driver PostgreSQL)</li>
+        <li>Dépendances : MySQL Connector, CommandLineMenus</li>
+        <li>Système : Windows 11</li>
+    </ul>
+
+    <h2>Architecture et conception</h2>
+    <p>L'application suit une architecture en couches avec séparation claire des responsabilités :</p>
+    <ul>
+        <li><strong>Couche présentation :</strong> Interface utilisateur en ligne de commande</li>
+        <li><strong>Couche métier :</strong> Logique de gestion des employés</li>
+        <li><strong>Couche données :</strong> Accès à la base de données via DAO pattern</li>
     </ul>
 
     <h2>Compétences mobilisées</h2>
     <ul>
-        <li>Développement d’une application Java</li>
-        <li>Connexion et manipulation d’une base de données</li>
-        <li>Structuration du code en POO</li>
-        <li>Tests et validation fonctionnelle</li>
+        <li>Développement d'une application Java complète avec Maven</li>
+        <li>Connexion et manipulation d'une base de données PostgreSQL via JDBC</li>
+        <li>Structuration du code en programmation orientée objet (POO)</li>
+        <li>Implémentation du pattern DAO pour l'accès aux données</li>
+        <li>Gestion des exceptions et validation des entrées utilisateur</li>
+        <li>Tests et validation fonctionnelle de l'application</li>
+        <li>Documentation et organisation du code source</li>
     </ul>
 
+    <h2>Résultats et livrables</h2>
+    <p>L'application a été développée avec succès et permet une gestion efficace du personnel. Le code source est organisé, documenté et prêt pour une éventuelle évolution. Les tests fonctionnels confirment le bon fonctionnement de toutes les fonctionnalités implémentées.</p>
+
   
-    <a href="C:\Users\user\Downloads\Situation_Professionnelle_2_E6_DIAMPAKA_Samir.pdf" class="btn" download>Télécharger la fiche</a>
+    <a href="Fiche de situation professionnelle SLAM - situation 1.pdf" class="btn" download>Télécharger la fiche</a>
     
 
 </section>
