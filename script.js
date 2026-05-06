@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
             initMatrixRain();
             initTerminalTyping();
             initSoundEffects();
+            initHomeButtonScrollBehavior();
             initPillChoices();
             initCountdownBTS();
             initParcoursTyping();
@@ -18,6 +19,30 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 500); // Petit délai après la disparition du loading
     }, 5000); // 5 secondes de chargement
 });
+
+function initHomeButtonScrollBehavior() {
+    const homeBtn = document.querySelector('.home-btn');
+    if (!homeBtn) return;
+
+    let lastScrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
+    const threshold = 10;
+
+    function updateButtonVisibility() {
+        const currentScrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
+        const scrollDelta = currentScrollY - lastScrollY;
+
+        if (currentScrollY <= 0 || scrollDelta < -threshold) {
+            homeBtn.classList.remove('hidden');
+        } else if (scrollDelta > threshold) {
+            homeBtn.classList.add('hidden');
+        }
+
+        lastScrollY = currentScrollY;
+    }
+
+    window.addEventListener('scroll', updateButtonVisibility, { passive: true });
+    updateButtonVisibility();
+}
 
 /* =========================
    ECRAN DE CHARGEMENT
@@ -28,7 +53,9 @@ function hideLoadingScreen() {
         loadingScreen.style.animation = "loadingExit 1s ease-in-out forwards";
         setTimeout(function() {
             loadingScreen.style.display = "none";
-        }, 1000);
+            // Redirection après la disparition de l'écran de chargement
+            window.location.href = 'index3.html';
+        }, 800);
     }
 }
 
@@ -374,3 +401,4 @@ function initEasterEgg() {
     });
 
 }
+

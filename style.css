@@ -1,10 +1,11 @@
+
 /* =========================
    GENERAL
    ========================= */
 body {
     margin: 0;
     background: black;
-    color: #00ff00;
+    color: #63e963;
     font-family: monospace;
      overflow-x: hidden;
     min-height: 100vh;
@@ -97,7 +98,14 @@ canvas {
     line-height: 1.5;
     animation: codeFade 2s ease-in-out infinite alternate;
 }
-
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-top: 1px solid #00ff00;
+    color: #00ff00;
+    box-shadow: 0 0 10px #00ff00;
+}
 @keyframes loadingPulse {
     0%, 100% { background: linear-gradient(45deg, #000000, #001100, #000000); }
     50% { background: linear-gradient(45deg, #000000, #002200, #000000); }
@@ -165,35 +173,41 @@ nav a:hover {
     position: fixed;
     top: 20px;
     left: 20px;
-    background: black;
+    background: rgba(0, 0, 0, 0.85);
     border: 1px solid #00ff00;
-    padding: 10px;
+    border-radius: 8px;
+    padding: 12px 16px;
     color: #00ff00;
     text-decoration: none;
-    z-index: 10;
+    z-index: 20;
+    opacity: 1;
+    visibility: visible;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease, opacity 0.2s ease, visibility 0.2s ease;
+    transform: translate3d(0, 0, 0);
 }
 
 .home-btn:hover {
     color: white;
-    box-shadow: 0 0 10px #00ff00;
+    box-shadow: 0 0 15px #00ff00;
+    transform: translate3d(0, -2px, 0);
 }
 
-/* =========================
-   CARTES / SECTIONS
-   ========================= */
-.card {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 30px;
-    border: 1px solid #00ff00;
-    background: rgba(0,0,0,0.8);
-    box-shadow: 0 0 20px #00ff00;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    transform-style: preserve-3d;
+.home-btn.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translate3d(-10px, 0, 0);
 }
 
-.center {
-    text-align: center;
+@media (max-width: 640px) {
+    .home-btn {
+        left: 50%;
+        transform: translate3d(-50%, 0, 0);
+    }
+
+    .home-btn.hidden {
+        transform: translate3d(-50%, 0, 0);
+    }
 }
 
 /* =========================
@@ -503,4 +517,140 @@ body {
 
 .contact-form button:hover {
     background: white;
+}
+
+/* CARD */
+.card {
+    width: 80%;
+    margin: 80px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid  #00ff00;
+}
+
+
+
+/* IMAGE PAR DÉFAUT */
+.matrix-img {
+    display: block;
+    max-width: 180px;
+    width: 100%;
+    height: auto;
+
+    margin: 25px auto;
+
+    border-radius: 10px;
+
+    /* effet propre sans casser ton style */
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* HOVER (léger effet stylé) */
+.matrix-img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px  #00ff00;
+}
+
+/* IMAGES PLUS GRANDES (axes de veille) */
+.card img[src*="medium"],
+.card img[src*="HTML5"] {
+    max-width: 300px;
+}
+
+/* ALIGNEMENT TEXTE + IMAGE (plus propre visuellement) */
+.card img + p {
+    text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .matrix-img {
+        max-width: 140px;
+    }
+
+    .card img[src*="medium"],
+    .card img[src*="HTML5"] {
+        max-width: 200px;
+    }
+}
+
+/* STYLE GLOBAL DE LA LISTE */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* CHAQUE ITEM (titre) */
+ul li {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 20px;
+
+    padding: 10px 15px;
+
+    border-left: 4px solid #00ff00;
+    background: rgba(0, 255, 136, 0.05);
+
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.1);
+}
+
+/* CONTENEUR AXES */
+.card h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* TITRES AXES */
+.card h3 {
+    margin-top: 30px;
+    padding-left: 10px;
+    border-left: 3px solid  #00ff00;
+    color: #63e963;
+}
+
+/* IMAGE AXE */
+.matrix-img {
+    display: block;
+    margin: 20px auto;
+    max-width: 160px;
+    border-radius: 8px;
+    padding: 8px;
+    background: rgba(0, 255, 136, 0.05);
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+}
+
+/* LISTE STRUCTURÉE */
+.card ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+/* CHAQUE BLOC (LI) */
+.card ul li {
+    background: rgba(0, 255, 136, 0.05);
+    border-left: 3px solid  #00ff00;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* PARAGRAPHE APRÈS CHAQUE LI */
+.card ul li + p {
+    margin-top: -10px;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    color: #ccffea;
+}
+
+/* EFFET HOVER */
+.card ul li:hover {
+    background: rgba(0, 255, 136, 0.1);
+    transform: translateX(5px);
+    transition: 0.3s;
 }

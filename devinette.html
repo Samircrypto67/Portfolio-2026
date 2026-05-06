@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini-jeu Devinette - Documentation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<canvas id="matrix"></canvas>
+
+<a href="projets.html" class="home-btn">Retour</a>
+
+<section class="card">
+
+<h1>Mini-jeu Devinette</h1>
+
+<p><strong>Type :</strong> Projet personnel (BTS SIO SLAM)</p>
+<p><strong>Technologies :</strong> JavaScript / HTML / CSS</p>
+
+<h2>Objectif</h2>
+<p>
+Créer un jeu interactif où le joueur doit deviner un nombre généré aléatoirement.
+</p>
+
+<h2>Principe</h2>
+<p>
+Le joueur doit trouver un nombre entre 1 et 100.
+À chaque tentative, le jeu indique si le nombre est trop grand ou trop petit.
+</p>
+
+<h2>Fonctionnalités</h2>
+<ul>
+<li>Génération d’un nombre aléatoire</li>
+<li>Saisie utilisateur</li>
+<li>Messages d’aide (plus grand / plus petit)</li>
+<li>Compteur de tentatives</li>
+<li>Fin de partie (victoire ou défaite)</li>
+</ul>
+
+<h2>Logique du jeu</h2>
+
+<pre>
+const nombre = Math.floor(Math.random() * 100) + 1;
+
+if (userGuess === nombre) {
+    message = "Bravo !";
+} else if (userGuess < nombre) {
+    message = "Trop petit";
+} else {
+    message = "Trop grand";
+}
+</pre>
+
+<p>
+Le jeu repose sur des conditions, des boucles et des événements JavaScript.
+</p>
+
+<h2>Structure</h2>
+<ul>
+<li>index.html → interface utilisateur</li>
+<li>style.css → design</li>
+<li>script.js → logique du jeu</li>
+</ul>
+
+<h2>Compétences développées</h2>
+<ul>
+<li>JavaScript (conditions, fonctions)</li>
+<li>Manipulation du DOM</li>
+<li>Gestion des événements</li>
+<li>Création d’un jeu interactif</li>
+</ul>
+
+<h2>Résultat</h2>
+<p>
+Jeu fonctionnel permettant à l’utilisateur de deviner un nombre avec interaction dynamique.
+</p>
+
+<h2>Lien du projet</h2>
+<p>
+<a href="https://github.com/Samircrypto67/minijeuxdevnette_nombre" target="_blank">
+Voir le projet GitHub
+</a>
+</p>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
